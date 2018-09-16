@@ -1,0 +1,98 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #ccc;
+	margin: 0;
+	padding: 0;
+}
+ul li {
+	list-style:  none;
+	position: relative;
+	width: 20%;
+	height: 100vh;
+	border-right: 3px solid #000;
+	float: left;
+	box-sizing: border-box;
+	transition: 0.5s;
+	text-align: center;
+}
+
+ul li:nth-child(1){
+	background: url(https://wallpapercave.com/wp/9cJmNaw.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+ul li:nth-child(2){
+	background: url(https://wallpapercave.com/wp/VqxKKxv.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+ul li:nth-child(3){
+	background: url(https://wallpapercave.com/wp/y1y90NN.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+ul li:nth-child(4){
+	background: url(https://wallpapercave.com/wp/D30gMh7.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+ul li:nth-child(5){
+	background: url(https://wallpapercave.com/wp/kVcOPuo.jpg);
+	background-size: cover;
+	background-position: left;
+}
+
+
+ul li#lastli {
+	/*removes extra border*/
+	border: none;  
+}
+
+ul li .content {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	opacity: 0;
+	visibility: hidden; /* Hides unless hovered*/
+	background: rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	color: #fff;
+}
+
+
+/* When the unordered list is hovered, then the individual
+	lists will be shrunk*/
+ul:hover li {
+	width: 10%;
+}
+
+/* Increases the specific hovered li to 60% width but causes
+	other li to go off screen due to them being 20% width
+	^Fixed by above css code*/
+ul li:hover {
+	width: 60%;
+
+}
+
+
+ul li:hover .content {
+	transition: opacity 2.5s ease-in;
+	visibility: visible;
+	bottom: 0;
+	opacity: 1;
+}
